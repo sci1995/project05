@@ -1,10 +1,8 @@
-
-
 import React, { useState, useEffect } from 'react';
 import List from './components/List';
 import NavBar from './components/NavBar';
-// import Header from './components/Header';
-import './App.css'
+import Card from './components/Card'; 
+import './App.css';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -14,12 +12,9 @@ function App() {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [aqiFilter, setAqiFilter] = useState('');
-  const [pm25Filter, setPm25Filter] = useState([0, 50]); // Range filter for pm25
+  const [pm25Filter, setPm25Filter] = useState([0, 50]);
   const [error, setError] = useState(null);
 
-  const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
-
-  // Fetch data using the API when city and country are set
   useEffect(() => {
     if (city && country) {
       const fetchData = async () => {
@@ -29,7 +24,7 @@ function App() {
           );
           const result = await response.json();
           setData(result.data);
-          setFilteredData(result.data); // Set filtered data to the full dataset initially
+          setFilteredData(result.data);
         } catch (err) {
           setError('Could not fetch data');
         }
@@ -38,17 +33,14 @@ function App() {
     }
   }, [city, country]);
 
-  // Filter logic
   useEffect(() => {
     const applyFilters = () => {
       let filtered = data;
 
-      // Filter by AQI if specified
       if (aqiFilter) {
         filtered = filtered.filter((entry) => entry.aqi <= aqiFilter);
       }
 
-      // Filter by pm25 range
       filtered = filtered.filter(
         (entry) => entry.pm25 >= pm25Filter[0] && entry.pm25 <= pm25Filter[1]
       );
@@ -59,21 +51,42 @@ function App() {
     applyFilters();
   }, [aqiFilter, pm25Filter, data]);
 
+ 
+  const totalItems = filteredData.length;
+  const meanAQI =
+    totalItems > 0
+      ? (
+          filteredData.reduce((sum, entry) => sum + entry.aqi, 0) / totalItems
+        ).toFixed(2)
+      : 0;
+  const pm25Values = filteredData.map((entry) => entry.pm25).sort((a, b) => a - b);
+  const medianPM25 =
+    totalItems > 0
+      ? pm25Values[Math.floor(totalItems / 2)]
+      : 0;
+
   return (
     <div className="App">
       <NavBar />
-      <h1> Air Quality Dashboard</h1>
+      <h1>Air Quality Dashboard</h1>
       {error ? (
         <p>{error}</p>
       ) : (
-        <List
-          data={filteredData}
-          setCity={setCity}
-          setCountry={setCountry}
-          setAqiFilter={setAqiFilter}
-          setPm25Filter={setPm25Filter}
-          pm25Filter={pm25Filter}
-        />
+        <>
+          <Card
+            totalItems={totalItems}
+            meanAQI={meanAQI}
+            medianPM25={medianPM25}
+          />
+          <List
+            data={filteredData}
+            setCity={setCity}
+            setCountry={setCountry}
+            setAqiFilter={setAqiFilter}
+            setPm25Filter={setPm25Filter}
+            pm25Filter={pm25Filter}
+          />
+        </>
       )}
     </div>
   );

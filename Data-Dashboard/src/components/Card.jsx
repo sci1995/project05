@@ -1,13 +1,23 @@
 import React from 'react';
 
-function Card({ entry }) {
+function Card({ totalItems, meanAQI, medianPM25 }) {
   return (
-    <div className="card">
-      <h3>{new Date(entry.timestamp_local).toLocaleString()}</h3>
-      <p>AQI: {entry.aqi}</p>
-      <p>O3: {entry.o3} µg/m³</p>
-      <p>PM2.5: {entry.pm25} µg/m³</p>
-      <p>CO: {entry.co} µg/m³</p>
+    <div className="summary-statistics">
+      <div className="statistic-card">
+        <h3>🟢 Total Items</h3>
+        <p>{totalItems}</p>
+        <p>This is the total number of data entries available.</p>
+      </div>
+      <div className="statistic-card">
+        <h3>📊 Mean AQI</h3>
+        <p>{meanAQI}</p>
+        <p>This represents the average Air Quality Index value.</p>
+      </div>
+      <div className="statistic-card">
+        <h3>🌫️ Median PM2.5</h3>
+        <p>{medianPM25}</p>
+        <p>This indicates the median level of PM2.5 in the data.</p>
+      </div>
     </div>
   );
 }
