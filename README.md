@@ -6,23 +6,22 @@ This web app:
 The Air Quality Dashboard offers users the ability to input specific city and country combinations to retrieve localized air quality data, which can be filtered by metrics such as AQI, and PM2.5. Additionally, it provides statistical insights,
 including the mean AQI and median PM2.5 levels, to help users assess and understand air quality conditions effectively
 
-Time spent: **X** hours spent in total
+Time spent: 10 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The list displays a list of data fetched using an API call**
-- [ ] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-  - [ ] *insert details*
-- [ ] **A search bar allows the user to search for an item in the fetched data**
-- [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+-  [x] **The list displays a list of data fetched using an API call**
+-  [x]. **Data uses the useEffect React hook and async/await syntax**
+-  [x]. **The app dashboard includes at least three summary statistics about the data such as**
+-  [x].**A search bar allows the user to search for an item in the fetched data**
+-  [x]. **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
+-  [x]. Multiple filters can be applied simultaneously
+-  [x]. Filters use different input types such as a text input, a selection, or a slider
 - [ ] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
@@ -36,7 +35,7 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ScreenToGif  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
