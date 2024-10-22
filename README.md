@@ -13,15 +13,15 @@ Time spent: 10 hours spent in total
 The following **required** functionality is completed:
 
 -  [x] **The list displays a list of data fetched using an API call**
--  [x]. **Data uses the useEffect React hook and async/await syntax**
--  [x]. **The app dashboard includes at least three summary statistics about the data such as**
--  [x].**A search bar allows the user to search for an item in the fetched data**
--  [x]. **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+-  [x] **Data uses the useEffect React hook and async/await syntax**
+-  [x] **The app dashboard includes at least three summary statistics about the data such as**
+-  [x]**A search bar allows the user to search for an item in the fetched data**
+-  [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
--  [x]. Multiple filters can be applied simultaneously
--  [x]. Filters use different input types such as a text input, a selection, or a slider
+-  [x] Multiple filters can be applied simultaneously
+-  [x] Filters use different input types such as a text input, a selection, or a slider
 - [ ] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
