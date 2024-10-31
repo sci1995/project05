@@ -3,6 +3,7 @@ import List from './components/List';
 import NavBar from './components/NavBar';
 import Card from './components/Card'; 
 import './App.css';
+import AirQualityChart from './components/AirQualityChart';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -86,6 +87,7 @@ function App() {
             setPm25Filter={setPm25Filter}
             pm25Filter={pm25Filter}
           />
+          {filteredData.length > 0 && <AirQualityChart data={filteredData} />}
         </>
       )}
     </div>

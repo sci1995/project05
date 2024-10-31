@@ -1,15 +1,27 @@
 import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar()  {
   return (
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">SearchBar</a></li>
+    <div>
+      <nav>
+        <ul>
+        <li className="NvBar" key="NavBar">
+        <Link style={{ color: "white" }} to="/">
+        Home
+      </Link>
+        </li>
+        <li>
+        <Link style={{ color: "white" }} to="/about">About</Link>
+        </li>
+        <li>
+        <Link style={{ color: "white" }} to="/contact">SearchBar</Link>
+      </li>
       </ul>
-    </nav>
+      </nav>
+      <Outlet />
+    </div>
   );
-}
+};
 
 export default NavBar;
