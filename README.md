@@ -1,5 +1,6 @@
 # Web Development Project 6 - Air Quality Dashboard
-Submitted by: *Aisha Beltagy
+Submitted by: *Aisha Beltagy*
+
 This web app: The Air Quality Dashboard offers users the ability to input specific city and country combinations to retrieve localized air 
 quality data, which can be filtered by metrics such as AQI, and PM2.5.dditionally, it provides
 statistical insights, including the mean AQI and median PM2.5 levels, to help users assess and understand air quality conditions effectively
