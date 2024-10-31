@@ -6,6 +6,7 @@ import DetailView from './components/DetailView';
 import Card from './components/Card'; 
 import AirQualityChart from './components/AirQualityChart';
 import './App.css';
+import AirQualityChart from './components/AirQualityChart';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -57,6 +58,7 @@ function App() {
   return (
     <>
       <NavBar />
+<<<<<<< HEAD
       {error && <div className="error">{error}</div>}
       <Card totalItems={totalItems} meanAQI={meanAQI} medianPM25={medianPM25} />
       
@@ -67,6 +69,30 @@ function App() {
         <Route path="/detail/:id" element={<DetailView data={filteredData} />} />
       </Routes>
     </>
+=======
+      <h1>Air Quality Dashboard</h1>
+      {error ? (
+        <p>{error}</p>
+      ) : (
+        <>
+          <Card
+            totalItems={totalItems}
+            meanAQI={meanAQI}
+            medianPM25={medianPM25}
+          />
+          <List
+            data={filteredData}
+            setCity={setCity}
+            setCountry={setCountry}
+            setAqiFilter={setAqiFilter}
+            setPm25Filter={setPm25Filter}
+            pm25Filter={pm25Filter}
+          />
+          {filteredData.length > 0 && <AirQualityChart data={filteredData} />}
+        </>
+      )}
+    </div>
+>>>>>>> 4160bd7ff80c6cc06f830f20a14200d8a81700d5
   );
 }
 

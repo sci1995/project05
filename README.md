@@ -1,28 +1,26 @@
-# Web Development Project 5 - Air Quality Dashboard
+# Web Development Project 6 - Air Quality Dashboard
+Submitted by: *Aisha Beltagy
+This web app: The Air Quality Dashboard offers users the ability to input specific city and country combinations to retrieve localized air 
+quality data, which can be filtered by metrics such as AQI, and PM2.5.dditionally, it provides
+statistical insights, including the mean AQI and median PM2.5 levels, to help users assess and understand air quality conditions effectively
 
-Submitted by: Aisha Beltagy
-
-This web app: 
-The Air Quality Dashboard offers users the ability to input specific city and country combinations to retrieve localized air quality data, which can be filtered by metrics such as AQI, and PM2.5. Additionally, it provides statistical insights,
-including the mean AQI and median PM2.5 levels, to help users assess and understand air quality conditions effectively
-
-Time spent: 10 hours spent in total
+Time spent: 5 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
--  [x] **The list displays a list of data fetched using an API call**
--  [x] **Data uses the useEffect React hook and async/await syntax**
--  [x] **The app dashboard includes at least three summary statistics about the data such as**
--  [x] **A search bar allows the user to search for an item in the fetched data**
--  [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+  - [x] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+  -[x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+
 
 The following **optional** features are implemented:
 
--  [x] Multiple filters can be applied simultaneously
--  [x] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [x] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -32,10 +30,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/zmB08Ov.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/ypADigv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ScreenToGif  
+GIF created with ScreenToGif
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
