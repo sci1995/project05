@@ -8,6 +8,8 @@ function SearchBar({ setCity, setCountry }) {
     e.preventDefault();
     setCity(inputCity);
     setCountry(inputCountry);
+    setInputCity('');  // Clear the input after submission
+    setInputCountry('');
   };
 
   return (

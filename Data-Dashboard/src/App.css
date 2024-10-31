@@ -67,3 +67,25 @@ nav li {
   padding: 10px;
   margin: 5px 0;
 }
+
+.detail-view {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+.list-item {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+}
+.list-item:hover {
+  background-color: #f0f0f0;
+}
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
